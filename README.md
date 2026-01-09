@@ -23,18 +23,16 @@ Esses parâmetros **não são configuráveis pelo usuário** apenas para efeito 
 ## 🧩 Arquitetura Geral
 
 ```text
-Streamlit App
-   │
-   ├── Visualização e interação
-   │
-   ▼
-FastAPI
-   │
-   ├── /train    → Treinamento do modelo
-   └── /predict  → Inferência
-   │
-   ▼
-Modelos LSTM salvos em disco (models/)
+Usuário
+  │
+  ▼
+Streamlit App  ───►  FastAPI  ───►  Modelo LSTM
+  │                   │
+  │                   ├── /train
+  │                   └── /predict
+  ▼
+Visualização de Previsões
+
 ```
 
 > Observação: o projeto também permite **execução local do treino** via Streamlit para fins educacionais e demonstração.
