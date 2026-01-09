@@ -7,7 +7,7 @@ from api.schemas import PredictRequest, PredictResponse, TrainRequest, TrainResp
 from src.inference import predict_for_ticker
 from src.train_one import train_and_save_for_ticker
 
-app = FastAPI(title="Forecast API", version="1.0.0")
+app = FastAPI(title="Previsão de preços LSTM Criptoativos", version="1.0.0")
 
 WINDOW_FIXED = 90
 HORIZON_FIXED = 14
